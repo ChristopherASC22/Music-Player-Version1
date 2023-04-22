@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Player</title>
+    <link rel="icon" href="https://th.bing.com/th/id/R.f67cc5cafc867108c8419576cfbcaab1?rik=e49WLhDc1EoJRg&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fiynque%2fios7-style%2f1024%2fMusic-icon.png&ehk=2BzaKxUVX5bQpDXMZJCYNxkIgbAdRFParTZE2Fk08t4%3d&risl=&pid=ImgRaw&r=0">
+    <script src="music_player.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Music Player</h1>
+    <audio id="audioPlayer"></audio>
+    <div id="controls">
+      <button id="playButton">Play</button>
+      <button id="stopButton">Stop</button>
+      <button id="shuffleButton">Shuffle</button>
+      <div id="volumeControl">
+        <label for="volumeSlider">Volume:</label>
+        <input type="range" id="volumeSlider" min="0" max="100" value="50">
+      </div>
+      <div id="seekControl">
+        <label for="seekSlider">Seek:</label>
+        <input type="range" id="seekSlider" min="0" max="100" value="0">
+        <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+      </div>
+    </div>
+    <div id="progressBar"></div>
+<span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+
+    <table id="playlist">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="music/Rae Sremmurd, Swae Lee, Slim Jxmmi - Powerglide (Audio) ft. Juicy J.mp3">Powerglide</a></td><td>Rae Sremmurda</td><td>5:33</td></tr>
+        <tr><td><a href="music/Bedtime Stories.mp3">Bedtime Stories</a></td><td>Rae Sremmurda & The Weeknd</td><td>4:52</td></tr>
+        <tr><td><a href="music/Rae Sremmurd, Swae Lee, Slim Jxmmi - CLOSE (Audio) ft. Travis Scott.mp3">CLOSE</a></td><td>Rae Sremmurda, Swae Lee, & Travis Scott</td><td>3:14</td></tr>
+        <tr><td><a href="music/Calvin Harris - Feels (Official Video) ft. Pharrell Williams, Katy Perry, Big Sean.mp3">Feels</a></td><td>Calvin Harris, Pharrell Williams, Katy Perry, & Big Sean</td><td>3:42</td></tr>
+        <tr><td><a href="music/Fetty Wap - Rewind feat. Monty (HQ).mp3">Rewind</a></td><td>Fetty Wap</td><td>5:37</td></tr>
+        <tr><td><a href="music/Young Franco - Fallin' Apart (Visualiser) ft. Denzel Curry, Pell.mp3">Fallin' Apart</a></td><td>Young Franco Ft. Denzel Curry</td><td>2:04</td></tr>
+        <tr><td><a href="music/Lil Uzi Vert - Demon High [Official Audio].mp3">Demon High</a></td><td>Lil Uzi Vert</td><td>3:17</td></tr>
+        <tr><td><a href="music/Lil Uzi Vert - The Way Life Goes [Official Visualizer].mp3">The Way Life Goes</a></td><td>Lil Uzi Vert & Oh Wonder</td><td>3:42</td></tr>
+        <tr><td><a href="music/Lost Angels (From Swaecation).mp3">Lost Angels</a></td><td>Rae Sremmurda & Swae Lee</td><td>3:24</td></tr>
+        <tr><td><a href="music/Post Malone, The Weeknd - One Right Now (Audio).mp3">One Right Now</a></td><td>Post Malone & The Weeknd</td><td>3:13</td></tr>
+        <tr><td><a href="music/Power Trip.mp3">Power Trip</a></td><td>J Cole</td><td>4:01</td></tr>
+        <tr><td><a href="music/These Worries.mp3">These Worries</a></td><td>Kid Cudi</td><td>4:15</td></tr>
+        <tr><td><a href="music/What About Me.mp3">What About Me</a></td><td>Lil Wayne</td><td>3:37</td></tr>
+        <tr><td><a href="music/Wiz Khalifa - The Thrill [Official Audio].mp3">The Thrill</a></td><td>Wiz Khalifa</td><td>3:54</td></tr>
+      </tbody>
+    </table>
+  </body>
+</html>
